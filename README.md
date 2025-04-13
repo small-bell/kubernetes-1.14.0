@@ -1,5 +1,6 @@
 # Kubernetes 1.14.0
 
+因为需要对K8S做二开，拉下来建的一个源码工程。
 # 搭建环境
 ```shell
 ProjectGoPath=kubernetes
@@ -28,8 +29,15 @@ for root, dirs, files in os.walk(target_path):
 
 print("Cleanup completed.")
 ```
+就别make了，直接debug开启。   
 
-# 原版文档
+makefile首先生成了几个生成器,源码在：   
+```shell
+src/k8s.io/kubernetes/vendor/k8s.io/gengo
+src/k8s.io/kubernetes/vendor/k8s.io/code-generator/cmd
+
+```
+# 原版ReadMe
 
 [![GoDoc Widget]][GoDoc] [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/569/badge)](https://bestpractices.coreinfrastructure.org/projects/569)
 
